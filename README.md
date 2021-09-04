@@ -1,5 +1,5 @@
 # MinecraftServerStatusDiscordBot (MSSB)
-MinecraftServerStatusDiscordBot or MinecraftServerStatusBot or simply MSSB is a simple bot for displaying the player count of a Minecraft server in Discord, setup is super fast and the bot can easily be self hosted.
+MinecraftServerStatusDiscordBot or MinecraftServerStatusBot or simply MSSB is a simple bot for displaying the player count and other things of a Minecraft server in Discord, setup is super fast and the bot can easily be self hosted.
 
 # Setup
 ## 1. Installation
