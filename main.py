@@ -41,10 +41,13 @@ async def status(ctx: commands.Context):
         description = f"{state.players.online} out of {state.players.max} currently online.", 
         color = 0xffb3ff
     )
-    embed.add_field(
-        name = "Players",
-        # List comprehension to get all the players in a nice looking string.
-        value = ", ".join([player.name for player in unwrap(state.players.sample)]))
+    
+    players = state.players.sample
+    if players is not None:
+        embed.add_field(
+            name = "Players",
+            # List comprehension to get all the players in a nice looking string.
+            value = ", ".join([player.name for player in players]))
 
     await ctx.reply(embed=embed)
 
