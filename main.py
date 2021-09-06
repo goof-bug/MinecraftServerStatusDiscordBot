@@ -18,10 +18,9 @@ def unwrap(value: Optional[T]) -> T:
 load_dotenv()
 DISCORD_TOKEN = unwrap(os.getenv("DISCORD_TOKEN"))
 SERVER_HOST = unwrap(os.getenv("SERVER_HOST"))
-SERVER_PORT = int(unwrap(os.getenv("SERVER_PORT")))
 BOT_PREFIX = unwrap(os.getenv("BOT_PREFIX"))
 
-server = MinecraftServer(SERVER_HOST, SERVER_PORT)
+server = MinecraftServer.lookup(SERVER_HOST)
 state = server.status()
 
 bot = commands.Bot(command_prefix = BOT_PREFIX)
