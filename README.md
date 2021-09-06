@@ -17,6 +17,7 @@ Rename the `.env.example` file to `.env` start filling in the relevant info.
  - `DISCORD_TOKEN` is for your Discord bot token, make a bot then get the token [here](https://discord.com/developers/applications).
  - `SERVER_HOST` The address of your Mineraft server, can include the port afterwards prefix with a `:`.
  - `BOT_PREFIX` The prefix for bot commands in Discord, defaults to `?`.
+ - `COLOR_HEX` Hexadecimal format color for the embed, defaults to Discord blurple.
 
  ## 4. Running
  Simply start the bot with:

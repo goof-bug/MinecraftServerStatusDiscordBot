@@ -19,6 +19,7 @@ load_dotenv()
 DISCORD_TOKEN = unwrap(os.getenv("DISCORD_TOKEN"))
 SERVER_HOST = unwrap(os.getenv("SERVER_HOST"))
 BOT_PREFIX = unwrap(os.getenv("BOT_PREFIX"))
+COLOR_HEX = int(unwrap(os.getenv("COLOR_HEX")), 16) # Make sure to convert to int with base 16 (hex)
 
 server = MinecraftServer.lookup(SERVER_HOST)
 state = server.status()
@@ -38,7 +39,7 @@ async def status(ctx: commands.Context):
     embed = discord.Embed(
         title = "Status", 
         description = f"{state.players.online} out of {state.players.max} currently online.", 
-        color = 0xffb3ff
+        color = COLOR_HEX
     )
     
     players = state.players.sample
