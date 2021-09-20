@@ -32,7 +32,7 @@ async def on_ready():
     update_state.start()
 
 # Command that sends the current server status as an embed
-@bot.command()
+@bot.command(aliases=["STATUS", "s", "S"])
 async def status(ctx: commands.Context):
     logging.info(f"Received status command from {ctx.author}")
     global state
